@@ -3,6 +3,7 @@ import {Switch, Route} from 'react-router-dom'
 import Home from './pages/Home'
 import About from './pages/About'
 
+// eslint-disable-next-line import/no-anonymous-default-export
 export default () =>{
     return(
         <Switch>
