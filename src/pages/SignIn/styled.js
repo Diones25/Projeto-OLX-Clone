@@ -39,6 +39,11 @@ export const PageArea = styled.div `
                     }
                 }
 
+                input[type="checkbox"]{
+                    width: 5%;
+                    margin-left: -1px;
+                }
+
                 button{
                     background-color: #0089ff;
                     border: 0;
