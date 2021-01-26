@@ -71,11 +71,11 @@ const Page = () =>{
                     <label className="area">
                         <div className="area--title">Estado</div>
                         <div className="area--input">
-                            <select value={stateLoc} onChange={e => setStateLoc(e.target.value)} required>
-                            <option></option>
-                            {stateList.map((e, k) =>
-                                <option key={k} value={e._id} >{e.name}</option>    
-                            )}
+                            <select value={stateLoc} onChange={e=>setStateLoc(e.target.value)} required>
+                                <option></option>
+                                {stateList.map((i,k)=>
+                                    <option key={k} value={i._id}>{i.name}</option>
+                                )}
                             </select>
                         </div>
                     </label>

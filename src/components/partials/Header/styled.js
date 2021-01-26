@@ -47,7 +47,6 @@ export const HeaderArea = styled.div`
         }
         li{
             margin-left: 20px;
-            margin-right: 20px;
 
             a, button{
                 border: 0;
