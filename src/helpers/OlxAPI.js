@@ -55,6 +55,21 @@ const OlxAPI = {
     login: async(email, password) =>{
         const json  = await apiFecthPost('/user/signin', {email, password})
         return json
+    },
+
+    register:async (name, email, password, stateLoc) =>{
+        const json = await apiFecthPost(
+            '/user/signup',
+            {name, email, password, state: stateLoc}
+        )
+        return json
+    },
+
+    getStates:async () =>{
+        const json = await apiFecthGet(
+            '/states'
+        )
+        return json.states
     }
 }
 // eslint-disable-next-line import/no-anonymous-default-export
