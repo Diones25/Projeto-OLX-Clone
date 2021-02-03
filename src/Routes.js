@@ -1,35 +1,44 @@
 import React from 'react'
-import {Switch, Route} from 'react-router-dom'
+import {Switch} from 'react-router-dom'
+import Routhandler from './components/Routhandler'
 import Home from './pages/Home'
 import About from './pages/About'
 import NotFound from './pages/NotFound'
 import SignIn from './pages/SignIn'
 import SignUp from './pages/SignUp'
 import AdPage from './pages/AdPage'
+import AddAd from './pages/AddAd'
 
-// eslint-disable-next-line import/no-anonymous-default-export
 export default () =>{
     return(
         <Switch>
-            <Route exact path="/">
+            <Routhandler exact path="/">
                 <Home/>
-            </Route>
+            </Routhandler>
 
-            <Route exact path="/about">
+            <Routhandler exact path="/about">
                 <About/>
-            </Route>
-            <Route exact path="/signin">
+            </Routhandler>
+
+            <Routhandler exact path="/signin">
                 <SignIn/>
-            </Route>
-            <Route exact path="/signup">
+            </Routhandler>
+
+            <Routhandler exact path="/signup">
                 <SignUp/>
-            </Route>
-            <Route exact path="/ad/:id">
+            </Routhandler>
+
+            <Routhandler exact path="/ad/:id">
                 <AdPage/>
-            </Route>
-            <Route>
+            </Routhandler>
+
+            <Routhandler private exact path="/post-an-ad">
+                <AddAd/>
+            </Routhandler>
+            
+            <Routhandler>
                 <NotFound/>
-            </Route>
+            </Routhandler>
         </Switch>
     )
 }
