@@ -21,6 +21,7 @@ const Page = () =>{
             const slist = await api.getStates()
             setStateList(slist)
         }
+        getStates()
     }, [])
 
     const handleSubmit = async (event) =>{

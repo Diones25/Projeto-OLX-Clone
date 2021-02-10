@@ -1,6 +1,7 @@
 import React, {useState, useEffect} from 'react'
 import {Link, useParams} from 'react-router-dom'
 import {Slide} from 'react-slideshow-image'
+import 'react-slideshow-image/dist/styles.css'
 import {PageArea,Fake, OthersArea, BreadChumb} from './styled'
 import useAPI from '../../helpers/OlxAPI'
 import {PageContainer} from '../../components/MainComponents'
